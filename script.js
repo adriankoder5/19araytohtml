@@ -51,13 +51,21 @@ const removeNr = document.querySelector('#removeNr');
 const outP = document.querySelector('#outP');
 const addNr = document.querySelector('#addNr')
 const inputField = document.querySelector('#inputField');
-const selectNum = document.querySelector('#selectNum')
+const selectNum = document.querySelector('#selectNum');
+const sortAll = document.querySelector('#sortAll')
 console.log(addFront, removeFront, addBack, removeBack, removeNr, outP, inputField);
 /*const selectNum = document.querySelector('#selectNum')
 console.log(selectNum)*/
 
 const THEarray = [];
 
+inputField.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    console.log('insert funny here0');
+    THEarray.unshift(inputField.value);
+    outP.textContent = THEarray;
+  }
+});
 addFront.addEventListener('click', ()=> {
   console.log('insert funny here1');
   THEarray.unshift(inputField.value);
@@ -86,6 +94,11 @@ removeNr.addEventListener('click', ()=> {
 addNr.addEventListener('click', ()=> {
   console.log('insert funny here6');
   THEarray.splice(selectNum.value-1, 0, inputField.value)
+  outP.textContent = THEarray;
+});
+sortAll.addEventListener('click', ()=> {
+  console.log('insert funny here7');
+  THEarray.sort();
   outP.textContent = THEarray;
 });
 
