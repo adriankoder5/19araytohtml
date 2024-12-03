@@ -49,10 +49,10 @@ const addBack = document.querySelector('#addBack');
 const removeBack = document.querySelector('#removeBack');
 const removeNr = document.querySelector('#removeNr');
 const outP = document.querySelector('#outP');
-const addNr = document.querySelector('#addNr')
+const addNr = document.querySelector('#addNr');
 const inputField = document.querySelector('#inputField');
 const selectNum = document.querySelector('#selectNum');
-const sortAll = document.querySelector('#sortAll')
+const sortAll = document.querySelector('#sortAll');
 console.log(addFront, removeFront, addBack, removeBack, removeNr, outP, inputField);
 /*const selectNum = document.querySelector('#selectNum')
 console.log(selectNum)*/
@@ -64,7 +64,7 @@ inputField.addEventListener('keydown', function (event) {
     console.log('insert funny here0');
     THEarray.unshift(inputField.value);
     outP.textContent = THEarray;
-  }
+  };
 });
 addFront.addEventListener('click', ()=> {
   console.log('insert funny here1');
@@ -88,12 +88,12 @@ removeBack.addEventListener('click', ()=> {
 });
 removeNr.addEventListener('click', ()=> {
   console.log('insert funny here5');
-  THEarray.splice(selectNum.value-1, 1)
+  THEarray.splice(selectNum.value-1, 1);
   outP.textContent = THEarray;
 });
 addNr.addEventListener('click', ()=> {
   console.log('insert funny here6');
-  THEarray.splice(selectNum.value-1, 0, inputField.value)
+  THEarray.splice(selectNum.value-1, 0, inputField.value);
   outP.textContent = THEarray;
 });
 sortAll.addEventListener('click', ()=> {
